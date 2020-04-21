@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const passport = require('passport');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -28,12 +29,14 @@ require('./routes/paymentRoutes')(app);
 mongoose.connect(keys.mongoURI);
 
 if (process.env.NODE_EN === 'production') {
-  app.use(express.static('client/build'));
+  app.use(express.static(path.join(__dirname, 'client/build')));
 
-  const path = require('path');
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
+  // app.get('/', function(req, res) {
+  //   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  // });
 }
 
 const port = process.env.PORT || 9000;
