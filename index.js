@@ -8,7 +8,6 @@ require('./models/User');
 require('./services/Passport');
 
 const keys = require('./config/keys');
-console.log('keys in index', keys);
 const app = express();
 app.use(bodyParser.json());
 
@@ -28,11 +27,12 @@ require('./routes/authRoutes')(app);
 require('./routes/paymentRoutes')(app);
 mongoose.connect(keys.mongoURI);
 
-if (process.env.NODE_EN === 'production') {
+if (process.env.NODE_ENV === 'production') {
   console.log('__dirname', __dirname);
   app.use(express.static(path.join(__dirname, 'client/build')));
 
   app.get('*', (req, res) => {
+    console.log('res.sendFile', res.sendFile);
     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
   });
 }
