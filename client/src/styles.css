@@ -1,0 +1,1835 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #FFF;
+    color: #000;
+    cursor: default;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: normal;
+    text-align: left;
+    visibility: visible;
+    white-space: normal;
+    height: 100%;
+    overflow-x: auto;
+    -ms-overflow-x: hidden;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+html {
+    height: 100%;
+    font-size: 62.5%;
+    box-sizing: border-box;
+    /* https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+#content {
+    padding: 10px;
+}
+
+#root {
+    height: 100vh;
+}
+
+ol, ul, p {
+    margin: 0;
+}
+
+sup {
+    line-height: 0;
+}
+
+.grid {
+    max-width: 1270px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
+    display: inline-block;
+    padding-left: 32px;
+    padding-right: 32px;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    border: 0;
+    cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    width: auto;
+    min-width: 145px;
+    border-radius: 24px;
+    border: 1px solid #000;
+    height: 42px;
+}
+
+.button.primary {
+    height: 42px;
+}
+
+.button.secondary {
+    color: #000;
+    background-color: #fff;
+    height: 42px;
+}
+
+.button.teritary {
+    color: #000;
+    background-color: #fff;
+    font-size: 10px;
+    min-width: 90px;
+    padding-left: 12px;
+    padding-right: 12px;
+    height: 20px;
+}
+
+.button.plain {
+    /*padding-top: 6px;*/
+    text-align: left;
+    padding-left: 8px;
+    padding-right: 0px;
+    text-align: start;
+    color: #000;
+    background-color: #fff;
+    border-radius: 0px;
+    height: 55px;
+    font-size: 12px;
+    border: 1px solid #d8dada;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.button.noBorder {
+    min-width: 90px;
+    /*padding-top: 6px;*/
+    padding-left: 8px;
+    padding-right: 0px;
+    text-align: start;
+    color: #000;
+    background-color: #fff;
+    border-radius: 0px;
+    height: 55px;
+    font-size: 14px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.button.disabled, .button[disable="true"], .button[disabled] {
+    background-color: #000;
+    border: 1px solid #000;
+    cursor: default;
+    opacity: 0.2;
+}
+
+.button[disabled].secondary {
+    color: #fff;
+}
+
+.button[disabled].plain {
+    background-color: transparent;
+}
+
+.selectButton {
+    height: 55px;
+    width: 100%;
+    border: 1px solid #747676;
+    background-color: #fff;
+    cursor: pointer;
+    padding-top: 13px;
+    padding-left: 13px;
+}
+
+.selectButton:hover {
+    background-color: #f6f6f6;
+}
+
+@media only screen and (min-width: 768px) {
+    .iconForMobile {
+        display: none
+    }
+    .iconForDesktop {
+        display: block
+    }
+    .button.enrollProtectionButton {
+        margin-left: 40px;
+        margin-top: 60px;
+        width: 70%;
+    }
+    .button.addDeviceButton {
+        margin-top: 15px;
+        width: 100%;
+    }
+    .button.addDeviceCancelButton {
+        margin-top: 15px;
+        width: 100%;
+    }
+    .button.cancelProtectionButton {
+        margin-left: 40px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .button.primary, .button.secondary {
+        width: 100%;
+    }
+    .button.teritary {
+        min-width: 90px !important;
+    }
+    .iconForMobile {
+        display: block
+    }
+    .iconForDesktop {
+        display: none
+    }
+    .button.enrollProtectionButton {
+        margin-top: 40px;
+        width: 100%;
+    }
+    .button.addDeviceButton {
+        margin-top: 15px;
+        width: 100%;
+    }
+    .button.cancelProtectionButton {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .button.addDeviceCancelButton {
+        margin-top: 15px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .gridwallBtn {
+        min-width: 120px !important;
+    }
+}
+
+.btnResponsive {
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .button.txtAlignment {
+        height: 65px;
+    }
+}
+
+a {
+    text-decoration: underline;
+    cursor: pointer;
+    color: inherit;
+}
+
+a.textDecorationNone {
+    text-decoration: none;
+}
+
+a.cta-text {
+    font-size: 14px;
+}
+
+.displayInline {
+    display: inline;
+}
+
+.displayBlock {
+    display: block;
+}
+
+.displayInlineBlock {
+    display: inline-block;
+}
+
+.displayNone {
+    display: none
+}
+
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: right;
+}
+
+.floatNone {
+    float: right;
+}
+
+.textAlignLeft {
+    text-align: left;
+}
+
+.textAlignRight {
+    text-align: right;
+}
+
+.textAlignJustify {
+    text-align: justify;
+}
+
+.textAlignCenter {
+    text-align: center;
+}
+
+.centerBlock {
+    display: block !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.verticalCenter {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.verticalAlignMiddle {
+    vertical-align: middle;
+}
+
+.verticalBottom {
+    vertical-align: bottom;
+}
+
+.debug {
+    border: 1px solid red;
+}
+
+/*Primary Colors*/
+
+.color_black {
+    color: #000;
+}
+
+.color_white {
+    color: #FFF;
+}
+
+.color_red {
+    color: #D52B1E;
+}
+
+/*Secondary Colors*/
+
+.color_gray_one {
+    color: #F6F6F6;
+}
+
+.color_gray_three {
+    color: #D8DADA;
+}
+
+.color_gray_six {
+    color: #747676;
+}
+
+.color_gray_ten {
+    color: #333;
+}
+
+.color_yellow {
+    color: #FFBC3D;
+}
+
+.color_orange {
+    color: #ED7000;
+}
+
+.color_green {
+    color: #00AC3E;
+}
+
+.color_blue {
+    color: #0e73c3;
+}
+
+.color_747676 {
+    color: #747676;
+}
+
+/****************************************
+           Font Styles
+****************************************/
+
+.fontRoman {
+    font-family: Verdana, Arial, sans-serif;
+}
+
+.fontDisplayBold {
+    font-family: Verdana, Arial, sans-serif;
+    font-weight: 700;
+}
+
+.legal {
+    color: #747676;
+    font-size: 10px;
+    font-size: 1.0rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: normal;
+    letter-spacing: .025em;
+}
+
+h1, h2, h3, .h1, .h2, .h3 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif Arial, Helvetica, sans-serif;
+}
+
+h4, h5, h6, h7, .h4, .h5, .h6, .h6, .h7 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, h6, h7 .h1, .h2, .h3, .h4, .h5, .h6, .h6, .h7 {
+    color: #000;
+}
+
+h1, .h1 {
+    font-size: 25px;
+    line-height: 24px;
+}
+
+h2, .h2 {
+    font-size: 24px;
+    line-height: 15px;
+}
+
+h3, .h3 {
+    font-size: 16px;
+    line-height: 11px;
+}
+
+h3.large, .h3.large {
+    font-size: 14px;
+    line-height: 13.5px;
+}
+
+p.bodySM, .pBodySM {
+    font-size: 12px;
+    line-height: 14.4px;
+}
+
+p.bodyLG, .pBodyLG {
+    font-size: 14px;
+    line-height: 16.8px;
+}
+
+p.subHeading, .subHeading {
+    font-size: 14px;
+    line-height: 16.8px;
+}
+
+p.caption, .caption {
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.fontSize_1 {
+    font-size: 10px;
+    font-size: 1rem;
+}
+
+.fontSize_2 {
+    font-size: 12px;
+    font-size: 1.2rem;
+}
+
+.fontSize_3 {
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+
+.fontSize_4 {
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+.fontSize_5 {
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+.fontSize_6 {
+    font-size: 20px;
+    font-size: 2.0rem;
+}
+
+.fontSize_7 {
+    font-size: 22px;
+    font-size: 2.2rem;
+}
+
+p.intro {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+p.body, .pBody {
+    font-size: 14px;
+    line-height: 16.8px;
+}
+
+p.article {
+    font-size: 14px;
+    line-height: 21px;
+}
+
+p.subHeading, .subHeading {
+    font-size: 16px;
+    line-height: 19.2px;
+}
+
+.normal {
+    font-weight: normal;
+}
+
+.bold, .fontWeightBold {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Helvetica, sans-serif;
+    font-weight: 800;
+}
+
+.boldText {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Helvetica, sans-serif;
+    font-weight: 800;
+}
+
+.bolder, .fontWeightBolder {
+    font-weight: bolder;
+    font-weight: 900;
+}
+
+.fontStyleNormal {
+    font-style: normal;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.hideText {
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+.textDecLineThrough {
+    text-decoration: line-through;
+}
+
+.textDecUnderline {
+    text-decoration: underline;
+}
+
+.textDecNone {
+    text-decoration: none;
+}
+
+.textRight {
+    text-align: right;
+}
+
+.cursorPointer {
+    cursor: pointer;
+}
+
+.cursorDefault {
+    cursor: default;
+}
+
+.noPointer {
+    pointer-events: none;
+}
+
+.opacity50 {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.noSelect {
+    cursor: default;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+/****************************************
+           Line Heights
+****************************************/
+
+.lineHeight1 {
+    line-height: 1;
+}
+
+.lineHeight8 {
+    line-height: 0.8rem;
+}
+
+.lineHeight10 {
+    line-height: 1.0rem;
+}
+
+.lineHeight12 {
+    line-height: 1.2rem;
+}
+
+.lineHeight14 {
+    line-height: 1.4rem;
+}
+
+.lineHeight16 {
+    line-height: 1.6rem;
+}
+
+.lineHeight18 {
+    line-height: 1.8rem;
+}
+
+.lineHeight20 {
+    line-height: 20px;
+}
+
+/* These will be removed soon */
+
+.lineHeight24 {
+    line-height: 2.4rem;
+}
+
+.lineHeight30 {
+    line-height: 3.0rem;
+}
+
+.lineHeight36 {
+    line-height: 3.6rem;
+}
+
+.lineHeight42 {
+    line-height: 4.2rem;
+}
+
+.lineHeightNormal {
+    line-height: normal;
+}
+
+/****************************************
+           Font Families
+****************************************/
+
+.iconFont {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, Helvetica, sans-serif;
+}
+
+.listStyleDisc li {
+    list-style: disc;
+}
+
+.listStyleDecimal li {
+    list-style: decimal;
+}
+
+.listStyleNone {
+    list-style: none;
+}
+
+/* classes to change font capitalization. */
+
+.textTransCapitalize {
+    text-transform: capitalize;
+}
+
+.textTransUppercase {
+    text-transform: uppercase;
+}
+
+.textTransLowercase {
+    text-transform: lowercase;
+}
+
+.transformRotate180 {
+    transform: rotate(180deg);
+}
+
+/*Toggle position as required*/
+
+.positionRelative {
+    position: relative;
+}
+
+.positionAbsolute {
+    position: absolute;
+}
+
+.positionFixed {
+    position: fixed;
+}
+
+.wordBreakAll {
+    word-break: break-all;
+}
+
+/*Percentage width*/
+
+.width5 {
+    width: 05%;
+}
+
+.width10 {
+    width: 10%;
+}
+
+.width15 {
+    width: 15%;
+}
+
+.width20 {
+    width: 20%;
+}
+
+.width25 {
+    width: 25%;
+}
+
+.width30 {
+    width: 30%;
+}
+
+.width35 {
+    width: 35%;
+}
+
+.width40 {
+    width: 40%;
+}
+
+.width45 {
+    width: 45%;
+}
+
+.width50 {
+    width: 50%;
+}
+
+.width55 {
+    width: 55%;
+}
+
+.width60 {
+    width: 60%;
+}
+
+.width65 {
+    width: 65%;
+}
+
+.width70 {
+    width: 70%;
+}
+
+.width75 {
+    width: 75%;
+}
+
+.width80 {
+    width: 80%;
+}
+
+.width85 {
+    width: 85%;
+}
+
+.width90 {
+    width: 90%;
+}
+
+.width95 {
+    width: 95%;
+}
+
+.width100 {
+    width: 100%;
+}
+
+.widthAuto {
+    width: auto;
+}
+
+/* Clearing */
+
+/* These should be in layout.css and camel cased */
+
+.clearBoth {
+    clear: both;
+}
+
+.clearLeft {
+    clear: left;
+}
+
+.clearRight {
+    clear: right;
+}
+
+.overflowAuto {
+    overflow: auto;
+}
+
+.overflowScroll {
+    overflow: scroll;
+}
+
+.overflowXAuto {
+    overflow-x: auto;
+}
+
+.whiteSpaceNoWrap {
+    white-space: nowrap;
+}
+
+.height10 {
+    height: 10px;
+}
+
+/* backgrounds */
+
+.background_black {
+    background: #000;
+}
+
+.background_white {
+    background: #FFF;
+}
+
+.background_red {
+    background: #D52B1E;
+}
+
+.background_transparent {
+    background: transparent;
+}
+
+/*Secondary Colors*/
+
+.background_gray_one {
+    background: #F6F6F6;
+}
+
+.background_gray_three {
+    background: #D8DADA;
+}
+
+.background_gray_six {
+    background: #747676;
+}
+
+.background_gray_ten {
+    background: #333;
+}
+
+.background_yellow {
+    background: #FFBC3D;
+}
+
+.background_orange {
+    background: #ED7000;
+}
+
+.background_green {
+    background: #00AC3E;
+}
+
+.background_blue {
+    background: #0088CE;
+}
+
+/* borders */
+
+.border_red {
+    border: 1px solid #D52B1E;
+}
+
+.border_black {
+    border: 1px solid #000;
+}
+
+.border_gray, .border_graySix {
+    border: 1px solid #747676;
+}
+
+.border_gray_one {
+    border: 1px solid #F6F6F6;
+}
+
+.border_grayThree {
+    border: 1px solid #D8DADA;
+}
+
+.largeBorder_graySix {
+    border: 2px solid #747676;
+}
+
+.largeBorder_grayThree {
+    border: 2px solid #D8DADA;
+}
+
+.largeBorder_red {
+    border: 2px solid #D52B1E;
+}
+
+.largeBorder_black {
+    border: 2px solid #000;
+}
+
+.largeBorder_white {
+    border: 2px solid #fff;
+}
+
+.customBorder {
+    border: 1px solid #000;
+    border-top: 4px solid #D52B1E;
+}
+
+.border_active {
+    border: 3px solid #cd040b;
+}
+
+.noTopBorder {
+    border-top: none;
+}
+
+.noBottomBorder {
+    border-bottom: none;
+}
+
+.noLeftBorder {
+    border-left: none;
+}
+
+.noRightBorder {
+    border-right: none;
+}
+
+.onlyTopBorder {
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+.onlyBottomBorder {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.onlyLeftBorder {
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+}
+
+.onlyRightBorder {
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+}
+
+.noSideBorder {
+    border-left: none;
+    border-right: none;
+}
+
+.onlySideBorder {
+    border-top: none;
+    border-bottom: none;
+}
+
+/* Clear Floated Elements */
+
+/* https://sonspring.com/journal/clearing-floats */
+
+.clear, .clear6, .clear12, .clear18, .clear24, .clear30, .clear36, .clear42, .clear54, .clear60, .clear72, .clear102 {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.clear6, .clear12, .clear18, .clear24, .clear30, .clear36, .clear42, .clear54, .clear72, .clear102 {
+    width: auto;
+}
+
+.clear6 {
+    height: 6px;
+}
+
+.clear12 {
+    height: 12px;
+}
+
+.clear18 {
+    height: 18px;
+}
+
+.clear24 {
+    height: 24px;
+}
+
+.clear30 {
+    height: 30px;
+}
+
+.clear36 {
+    height: 36px;
+}
+
+.clear42 {
+    height: 42px;
+}
+
+.clear54 {
+    height: 54px;
+}
+
+.clear60 {
+    height: 60px;
+}
+
+.clear72 {
+    height: 72px;
+}
+
+.clear102 {
+    height: 102px;
+}
+
+.clear107 {
+    height: 102px;
+}
+
+.clear156 {
+    height: 156px;
+}
+
+.clear198 {
+    height: 198px;
+}
+
+/* https://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+
+.clearfix:before, .clearfix:after {
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ The following zoom:1 rule is specifically for IE6 + IE7.
+ Move to separate stylesheet if invalid CSS is a problem.
+*/
+
+.lt-ie8 .clearfix {
+    zoom: 1;
+}
+
+/*For simplifying the layout of an ordered or unordered list element*/
+
+.plainList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.noIndentList {
+    padding-left: 1em
+}
+
+.inlineList, .inlineList>li {
+    display: inline;
+}
+
+.normalList {
+    list-style: inherit;
+}
+
+.pad3 {
+    padding: 3px;
+}
+
+.pad5 {
+    padding: 5px;
+}
+
+.pad6 {
+    padding: 6px;
+}
+
+.pad8 {
+    padding: 8px;
+}
+
+.pad9 {
+    padding: 9px;
+}
+
+.pad10 {
+    padding: 10px;
+}
+
+.pad12 {
+    padding: 12px;
+}
+
+.pad15 {
+    padding: 15px;
+}
+
+.pad18 {
+    padding: 18px;
+}
+
+.pad20 {
+    padding: 20px;
+}
+
+.pad24 {
+    padding: 24px;
+}
+
+.pad28 {
+    padding: 28px;
+}
+
+.pad30 {
+    padding: 30px;
+}
+
+.pad32 {
+    padding: 32px;
+}
+
+.pad36 {
+    padding: 36px;
+}
+
+.pad42 {
+    padding: 42px;
+}
+
+.pad48 {
+    padding: 48px;
+}
+
+.pad54 {
+    padding: 54px;
+}
+
+.pad60 {
+    padding: 60px;
+}
+
+.pad72 {
+    padding: 72px;
+}
+
+.pad96 {
+    padding: 96px;
+}
+
+.pad102 {
+    padding: 102px;
+}
+
+.noPad {
+    padding: 0 !important;
+}
+
+.noSidePad {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.noBottomPad {
+    padding-bottom: 0 !important;
+}
+
+.onlySidePad, .sidePadOnly {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.onlyTopPad {
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.onlyBottomPad {
+    padding-top: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.onlyLeftPad {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-right: 0 !important;
+}
+
+.onlyRightPad {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+}
+
+.noTopPad {
+    padding-top: 0 !important;
+}
+
+.noBottomPad {
+    padding-bottom: 0 !important;
+}
+
+.noLeftPad {
+    padding-left: 0 !important;
+}
+
+.noRightPad {
+    padding-right: 0 !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .marginTop10 {
+        margin-top: 10px;
+    }
+    .padRight10 {
+        padding-right: 10px;
+    }
+}
+
+@media only screen and (min-width: 1020px) {
+    .elementTopPad {
+        padding-top: 10px;
+    }
+}
+
+.elementTopPad {
+    padding-top: 8px;
+}
+
+.elementTopPad_L {
+    padding-top: 16px;
+}
+
+.margin0 {
+    margin: 0;
+}
+
+.margin2 {
+    margin: 2px;
+}
+
+.margin3 {
+    margin: 3px;
+}
+
+.margin5 {
+    margin: 5px;
+}
+
+.margin6 {
+    margin: 6px;
+}
+
+.margin10 {
+    margin: 10px;
+}
+
+.margin12 {
+    margin: 12px;
+}
+
+.margin15 {
+    margin: 15px;
+}
+
+.margin16 {
+    margin: 16px;
+}
+
+.margin17 {
+    margin: 17px;
+}
+
+.margin18 {
+    margin: 18px;
+}
+
+.margin20 {
+    margin: 20px;
+}
+
+.margin24 {
+    margin: 24px;
+}
+
+.margin30 {
+    margin: 30px;
+}
+
+.margin33 {
+    margin: 33px;
+}
+
+.margin36 {
+    margin: 36px;
+}
+
+.margin42 {
+    margin: 42px;
+}
+
+.margin48 {
+    margin: 48px;
+}
+
+.margin50 {
+    margin: 50px;
+}
+
+.margin54 {
+    margin: 54px;
+}
+
+.margin60 {
+    margin: 60px;
+}
+
+.margin72 {
+    margin: 72px;
+}
+
+.margin75 {
+    margin: 75px;
+}
+
+.margin102 {
+    margin: 102px;
+}
+
+.margin-6 {
+    margin: -6px;
+}
+
+.margin-10 {
+    margin: -10px;
+}
+
+.margin-24 {
+    margin: -24px;
+}
+
+.margin-36 {
+    margin: -36px;
+}
+
+.margin-42 {
+    margin: -42px;
+}
+
+.margin-48 {
+    margin: -48px;
+}
+
+.margin-78 {
+    margin: -78px;
+}
+
+.margin-90 {
+    margin: -90px;
+}
+
+.noMargin {
+    margin: 0;
+}
+
+.noSideMargin {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.noTopMargin {
+    margin-top: 0;
+}
+
+.noBottomMargin {
+    margin-bottom: 0;
+}
+
+.noRightMargin {
+    margin-right: 0;
+}
+
+.noLeftMargin {
+    margin-left: 0;
+}
+
+.onlySideMargin, .sideMarginOnly {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.onlyTopMargin {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.onlyBottomMargin {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.onlyLeftMargin {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+.onlyRightMargin {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.width6 {
+    width: 6px;
+}
+
+.width12 {
+    width: 12px;
+}
+
+.width18 {
+    width: 18px;
+}
+
+.width24 {
+    width: 24px;
+}
+
+.width30 {
+    width: 30px;
+}
+
+.width36 {
+    width: 36px;
+}
+
+.width42 {
+    width: 42px;
+}
+
+.width48 {
+    width: 48px;
+}
+
+.width54 {
+    width: 54px;
+}
+
+.width60 {
+    width: 60px;
+}
+
+.width72 {
+    width: 72px;
+}
+
+.width102 {
+    width: 102px;
+}
+
+.width300 {
+    width: 300px;
+}
+
+.height6 {
+    height: 6px;
+}
+
+.height10 {
+    height: 10px;
+}
+
+.height12 {
+    height: 12px;
+}
+
+.height18 {
+    height: 18px;
+}
+
+.height24 {
+    height: 24px;
+}
+
+.height30 {
+    height: 30px;
+}
+
+.height36 {
+    height: 36px;
+}
+
+.height42 {
+    height: 42px;
+}
+
+.height48 {
+    height: 48px;
+}
+
+.height54 {
+    height: 54px;
+}
+
+.height60 {
+    height: 60px;
+}
+
+.height72 {
+    height: 72px;
+}
+
+.height102 {
+    height: 102px;
+}
+
+.height132 {
+    height: 132px;
+}
+
+.height160 {
+    height: 160px;
+}
+
+/* Module for Vertical Centering */
+
+/*  center goes on a container.
+ center_element goes on the elements you want to center.
+ Add the m-verticalOnly class to the center container to remove horizontal centering and only center the element vertically.
+ https://css-tricks.com/centering-in-the-unknown/
+*/
+
+.center {
+    white-space: nowrap;
+    text-align: center;
+}
+
+.center:before {
+    content: "";
+    /* Adding Extra Space Above Element */
+    display: inline-block;
+    height: 100%;
+    margin-right: -0.3em;
+    vertical-align: middle;
+}
+
+.center>* {
+    white-space: normal;
+    /*reset the white-space to behave normally for all elements inside the centerV container */
+    text-align: left;
+}
+
+.center_element {
+    display: inline-block;
+    float: none;
+    vertical-align: middle;
+    white-space: normal;
+    text-align: left;
+}
+
+.floatRight {
+    float: right;
+}
+
+/***************************************************
+       Media Module
+A module where an image floats left of some content to its right.
+https://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context
+***************************************************/
+
+.media {
+    overflow: auto;
+}
+
+.media_graphic {
+    float: left;
+    margin-right: 10px;
+}
+
+.media_graphic.m-flipped {
+    float: right;
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.media_content {
+    overflow: auto;
+    /*https://www.stubbornella.org/content/2009/07/23/overflow-a-secret-benefit/*/
+}
+
+.mediaSplash_container {
+    height: 50vh;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 100vw;
+}
+
+.media_splash {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/***************************************************
+         Table
+When you need the convienence of table without using
+an acutal table.
+***************************************************/
+
+.table {
+    display: table;
+}
+
+.table_tr {
+    display: table-row;
+}
+
+.table_td {
+    display: table-cell;
+}
+
+.vertical_align_middle {
+    vertical-align: middle;
+}
+
+.backgroundPosition {
+    background-position: center;
+}
+
+.backgroundPosition.right.bottom {
+    background-position: right bottom;
+}
+
+.noRepeat {
+    background-repeat: no-repeat;
+}
+
+.block {
+    display: block
+}
+
+.flex {
+    display: flex;
+}
+
+.is-hidden {
+    display: none;
+}
+
+.is-visuallyHidden {
+    display: block;
+    width: 1px;
+    height: 1px;
+    text-indent: 1px;
+    overflow: hidden
+}
+
+.is-disabled {
+    color: #e5e6e4;
+    text-decoration: none;
+    cursor: default;
+}
+
+/*
+*  Vertical Height for screen size,
+*  this propery sets screen size based height
+**/
+
+.vh50 {
+    height: 50vh;
+}
+
+.vh60 {
+    height: 60vh;
+}
+
+.vh70 {
+    height: 70vh;
+}
+
+.vh80 {
+    height: 80vh;
+}
+
+.vh90 {
+    height: 90vh;
+}
+
+.vh100 {
+    height: 100vh;
+}
+
+.img_boxShadow {
+    -webkit-box-shadow: -6px -5px 23px -8px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: -6px -5px 23px -8px rgba(0, 0, 0, 0.35);
+    box-shadow: -6px -5px 23px -8px rgba(0, 0, 0, 0.35);
+}
+
+@media only screen and (max-width: 767px) {
+    .onlyMobile {
+        display: block !important;
+    }
+    .onlyDesktop {
+        display: none !important;
+    }
+    .stickySummary .subTotal {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .onlyMobile {
+        display: none !important;
+    }
+    .onlyDesktop {
+        display: block !important;
+    }
+}
+
+.justifyContentCenter {
+    justify-content: center;
+}
+
+.alignItemsCenter {
+    align-items: center;
+}
+
+/*** yet to decide max-width ****/
+
+.row {
+    margin: 0 !important;
+}
+
+#app [class^="col-"] {
+    padding: 0px;
+}
+
+#app .gridPadding {
+    padding: 16px !important;
+}
+
+@media only screen and (min-width: 414px) and (max-width: 767px) {
+    #app .gridPadding {
+        padding: 20px !important;
+    }
+    .grid {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .minHeight {
+        min-height: 600px;
+    }
+    .contentMaxWidth {
+        max-width: 325px;
+    }
+    .confirmationContentMaxWidth {
+        max-width: 350px;
+    }
+    .creditMaxWidth {
+        max-width: 400px;
+    }
+}
+
+@media only screen and (min-width: 1020px) {
+    #app .gridPadding {
+        padding: 20px !important;
+    }
+    .contentMaxWidth {
+        max-width: 400px;
+    }
+    .confirmationContentMaxWidth {
+        max-width: 500px;
+    }
+    .creditMaxWidth {
+        max-width: 550px;
+    }
+}
+
+@media only screen and (min-width: 1270px) {
+    .grid {
+        max-width: 1270px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.header, .footer {
+    min-height: 10%;
+}
+
+.mainContainer {
+    min-height: 80%;
+}
+
+.navBar, .page-footer {
+    height: 100%;
+}
+
+.page-footer {
+    padding-top: 0 !important;
+}
+
+.height100 {
+    height: 100% !important;
+}
