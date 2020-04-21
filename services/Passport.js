@@ -1,10 +1,9 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
-
 const mongoose = require('mongoose');
-const User = mongoose.model('users');
-
 const keys = require('../config/keys');
+
+const User = mongoose.model('users');
 
 passport.serializeUser((user, done) => {
   done(null, user.id);
@@ -27,7 +26,7 @@ passport.use(
     async (accessToken, refreshToken, profile, done) => {
       const existingUser = await User.findOne({ googleId: profile.id });
       if (existingUser) {
-        return done(null, user);
+        return done(null, existingUser);
       }
       const newUser = await new User({ googleId: profile.id }).save();
       done(null, newUser);
