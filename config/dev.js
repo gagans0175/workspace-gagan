@@ -1,6 +1,6 @@
 module.exports = {
-  googleClientID: '795658878179-e7r9melqkn5lp5pi0qal85dqgi3pslab.apps.googleusercontent.com',
-  googleClientSecret: '_zzkJDNFp5tKYgkhoSEDHKGz',
+  googleClientID: '964529356187-jujgdg79gvhvvulqpklaunl596vnfac2.apps.googleusercontent.com',
+  googleClientSecret: 'vx4IvAD3B013N6FwtfEwgZnP',
   mongoURI: 'mongodb+srv://gaganbawa86:swift1825@fullstacklearning-gtipg.mongodb.net/test?retryWrites=true&w=majority',
   cookieKey: 'koivirandomvaluerakhotuhadimarji',
   stripePublishableKey: 'pk_test_a7vw2fkeJU0Vm8Hi2Iz1WPJ000PzaLljfe',

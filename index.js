@@ -8,7 +8,7 @@ require('./models/User');
 require('./services/Passport');
 
 const keys = require('./config/keys');
-
+console.log('keys in index', keys);
 const app = express();
 app.use(bodyParser.json());
 
