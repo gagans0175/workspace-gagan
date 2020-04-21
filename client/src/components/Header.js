@@ -11,7 +11,9 @@ export default class Header extends Component {
       case false:
         return (
           <li>
-            <a href='/auth/googleService'>Login with Google</a>
+            <a className='textDecorationNone fontSize_4' href='/auth/googleService'>
+              Login with Google
+            </a>
           </li>
         );
       default:
@@ -19,11 +21,13 @@ export default class Header extends Component {
           <li key='1'>
             <Payment />
           </li>,
-          <li key='3' style={{ margin: '0 10px' }}>
+          <li className='fontSize_4' key='3' style={{ margin: '0 10px' }}>
             Credits: {this.props.auth && this.props.auth.credits}
           </li>,
           <li key='2'>
-            <a href='/api/logout'>Logout</a>
+            <a className='textDecorationNone fontSize_4' href='/api/logout'>
+              Logout
+            </a>
           </li>
         ];
     }
@@ -37,7 +41,10 @@ export default class Header extends Component {
               <Row className='height100'>
                 <Col xs={1} className='noSidePad'></Col>
                 <Col xs={10} className='noSidePad'>
-                  <Link to={this.props.auth ? '/surveys' : '/'} className='left brand-logo height100'>
+                  <Link
+                    to={this.props.auth ? '/surveys' : '/'}
+                    className='left brand-logo height100 textDecorationNone'
+                  >
                     Fierce-Hollows
                   </Link>
                   <ul className='right height100'>{this.renderLoginButton()}</ul>
