@@ -29,10 +29,11 @@ require('./routes/paymentRoutes')(app);
 mongoose.connect(keys.mongoURI);
 
 if (process.env.NODE_EN === 'production') {
+  console.log('__dirname', __dirname);
   app.use(express.static(path.join(__dirname, 'client/build')));
 
   app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
   });
 }
 
